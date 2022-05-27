@@ -9,7 +9,7 @@ const config = {
   title: 'LX Music',
   tagline: '一个免费&开源的音乐查找工具',
   url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  baseUrl: '/lx-music-doc/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
