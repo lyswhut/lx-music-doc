@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'LX Music',
   tagline: '一个免费&开源的音乐查找工具',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://lxmusic.toside.cn',
   baseUrl: '/',
   // baseUrl: '/lx-music-doc/',
   onBrokenLinks: 'throw',
