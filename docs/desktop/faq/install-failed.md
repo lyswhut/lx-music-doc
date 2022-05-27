@@ -23,7 +23,8 @@ title: 安装失败
 
 ### MAC OS无法启动软件，提示 lx-music-desktop 已损坏
 
-这是因为软件没有签名，被系统阻止运行，<br />
+这是因为软件没有签名，被系统阻止运行
+
 在终端里输入 `sudo xattr -rd com.apple.quarantine /Applications/lx-music-desktop.app`，然后输入你的电脑密码即可
 
 还可以参考：
