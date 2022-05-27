@@ -81,6 +81,11 @@ const sidebars = {
     },
     {
       type: 'doc',
+      id: 'mobile/statusbar-lyric', // document ID
+      label: '状态栏歌词', // sidebar label
+    },
+    {
+      type: 'doc',
       id: 'mobile/datapath', // document ID
       label: '数据存储路径', // sidebar label
     },
