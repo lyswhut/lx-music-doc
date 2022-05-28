@@ -33,10 +33,11 @@ function HomepageHeader() {
 }
 
 export default function Home() {
+  const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title="LX Music官方网站"
-      description="LX Music官方网站"
+      title={`${siteConfig.title} - ${siteConfig.tagline}`}
+      description={`${siteConfig.title} - ${siteConfig.tagline}`}
       >
       <HomepageHeader />
       <main>
