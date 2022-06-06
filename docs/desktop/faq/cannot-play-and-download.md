@@ -37,7 +37,7 @@ title: 歌曲无法试听与下载
 1. 将DNS改成自动获取试试
 2. 手动把DNS改一下，不要用360的DNS，可以把DNS改成`223.6.6.6`、`8.8.8.8`
 
-### Windows版提示 `音频加载错误，5秒后切换下一首`
+### Windows版所有歌曲都提示 `音频加载错误，5秒后切换下一首`
 
 尝试关闭 Internet选项 的代理设置。
 
@@ -46,6 +46,8 @@ title: 歌曲无法试听与下载
 
 按<kbd>windows</kbd>+<kbd>r</kbd>键打开“运行”窗口，输入`inetcpl.cpl`后回车，在打开的 Internet选项 对话框中，切换到 连接 -> 局域网设置，在弹出的新窗口中把代理服务器下的勾去掉，如果自动配置下的勾也有被勾选，那么建议也去掉，最后按确定关闭所有弹窗。
 :::
+
+> 来源：<https://github.com/lyswhut/lx-music-desktop/issues/873#issuecomment-1146945724>
 
 ### 歌曲下载失败，提示 `ENOENT: no such file or directory, mkdir`
 
