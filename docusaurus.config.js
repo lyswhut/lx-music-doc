@@ -48,6 +48,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: 'https://github.com/lyswhut/lx-music-doc/tree/master/',
+          showLastUpdateAuthor: true,
           showLastUpdateTime: true,
         },
         blog: false,
@@ -135,6 +136,29 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+      },
+      algolia: {
+        // The application ID provided by Algolia
+        appId: 'NWP2U7O7XE',
+  
+        // Public API key: it is safe to commit it
+        apiKey: 'd74d2766346af31fdc6c6f918b011c17',
+  
+        indexName: 'lyswhut',
+  
+        // Optional: see doc section below
+        contextualSearch: true,
+  
+        // // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+        // externalUrlRegex: 'external\\.com|domain\\.com',
+  
+        // // Optional: Algolia search parameters
+        // searchParameters: {},
+  
+        // // Optional: path for search page that enabled by default (`false` to disable it)
+        // searchPagePath: 'search',
+  
+        //... other Algolia params
       },
     }),
 };
