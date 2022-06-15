@@ -19,5 +19,5 @@ title: 状态栏歌词
 现在此特性被放到`statusbar-lyric`分支上，并设置了构建任务，想要此功能的人可以去这里下载构建包：<https://github.com/lyswhut/lx-music-mobile/actions/workflows/statusbar-lyric.yml>
 
 :::tip
-这需要登录GitHub才能下载，如果你不知道怎么下载，可以去企鹅测试群(`768786588`)文件下载
+这需要登录GitHub才能下载，如果你不知道怎么下载，可以去企鹅测试群(`768786588`)文件下载（文件名带`sl`后缀）
 :::
