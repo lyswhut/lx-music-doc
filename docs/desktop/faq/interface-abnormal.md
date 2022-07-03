@@ -4,6 +4,10 @@ sidebar_position: 2
 title: 界面异常（界面显示不完整）
 ---
 
+### Windows 10、11界面异常
+
+这个问题一般是硬件加速有问题导致的，尝试添加启动参数 `-dha` 启动，例如：`.\lx-music-desktop.exe -dha`，添加方法可自行百度“给快捷方式加参数”，该参数的作用是禁用硬件加速启动，没有遇到问题不要使用此参数！
+
 ### Windows 7 下界面异常
 
 由于软件默认使用了透明窗口，根据Electron官方文档的[说明](https://www.electronjs.org/docs/latest/tutorial/window-customization#limitations)：
