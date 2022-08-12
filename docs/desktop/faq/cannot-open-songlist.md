@@ -1,7 +1,7 @@
 ---
 id: cannot-open-songlist
 sidebar_position: 1.6
-title: 无法打开外部歌单
+title: 无法打开（导入）外部歌单
 ---
 
 
