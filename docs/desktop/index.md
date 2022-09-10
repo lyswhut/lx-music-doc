@@ -22,3 +22,8 @@
 或者到网盘下载（网盘内有MAC、windows版）：`https://www.lanzoui.com/b0bf2cfa/` 密码：`glqw`（若链接无法打开请百度：蓝奏云链接打不开）
 
 使用常见问题请转至：[常见问题](/desktop/faq)
+
+
+import DocCardList from '@theme/DocCardList'
+
+<DocCardList />

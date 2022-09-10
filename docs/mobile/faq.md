@@ -8,3 +8,8 @@ title: 常见问题
 :::tip
 你可以尝试使用右上角的搜索功能搜索你遇到的问题
 :::
+
+
+import DocCardList from '@theme/DocCardList'
+
+<DocCardList />

@@ -23,3 +23,7 @@
 
 使用常见问题请转至：[常见问题](/mobile/faq)
 
+
+import DocCardList from '@theme/DocCardList'
+
+<DocCardList />
