@@ -11,7 +11,7 @@ title: 软件下载
 
 <https://github.com/lyswhut/lx-music-mobile/releases>
 
-## 网盘下载
+## 网盘下载（推荐国内用户在网盘下载）
 
 推荐国内用户使用此方式下载，软件发布更新时，此网盘的安装包会同步更新到最新版本。
 
