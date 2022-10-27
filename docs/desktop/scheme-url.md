@@ -12,7 +12,7 @@ title: Scheme URL支持
 
 - URL统一以`lxmusic://`开头
 - 若无特别说明，源的可用值为：`kw/kg/tx/wy/mg`
-- 若无特别说明，音质的可用值为：`128k/320k/flac/flac32bit`
+- 若无特别说明，音质的可用值为：`128k/320k/flac/flac24bit`
 
 目前支持两种传参方式：
 
