@@ -6,11 +6,10 @@ title: 界面异常（界面显示不完整、界面无法显示）
 
 ### Windows 10、11界面异常、界面无法显示
 
-尝试添加运行参数 `--disable-gpu-sandbox` 启动，例如：`.\lx-music-desktop.exe --disable-gpu-sandbox`，添加方法可自行百度“给快捷方式加参数”。
+尝试添加运行参数 `--no-sandbox` 启动，例如：`.\lx-music-desktop.exe --no-sandbox`，添加方法可自行百度“给快捷方式加参数”。
 
-若以上方法无效，则尝试将 `--disable-gpu-sandbox` 逐个换成以下参数启动，直到恢复正常为止：
+尝试将 `--no-sandbox` 逐个换成以下参数启动，直到恢复正常为止：
 
-- `--no-sandbox`
 - `-dha`
 - `--disable-gpu`
 
