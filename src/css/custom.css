@@ -58,3 +58,6 @@
 [class*='docItemContainer']>article>.markdown {
   flex: auto;
 }
+[class*='docPage'] {
+  flex:  1;
+}
