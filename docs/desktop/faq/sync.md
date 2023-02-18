@@ -5,7 +5,7 @@ title: 同步功能的使用
 ---
 
 :::caution
-此功能是实验性的，v2.0.0的同步功能不支持与移动端v1.0.0之前版本的使用，需等待后面的新版移动端，目前移动端v1的开发工作已在进行中，若仍然想要使用此功能可以下载[v1.22.3](https://github.com/lyswhut/lx-music-desktop/releases/tag/v1.22.3)绿色版用着先，后面同步在新版可以用了再用新版，到时候清理[数据目录](../datapath)下的LxDatas重新自动迁移旧版数据即可
+此功能是实验性的，v2.0.0的同步功能不支持与移动端v1.0.0之前版本的使用，目前移动端v1.0.0-beta版已经可用，可用去[GitHub Actions](https://github.com/lyswhut/lx-music-mobile/actions)下载，或者可以将PC版退回[v1.22.3](https://github.com/lyswhut/lx-music-desktop/releases/tag/v1.22.3)绿色版用着先，后面同步在新版可以用了再用新版，到时候清理[数据目录](../datapath)下的LxDatas重新自动迁移旧版数据即可
 :::
 
 :::danger
