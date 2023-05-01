@@ -168,5 +168,7 @@ const cancelHttp = window.lx.request(url, options, callback)
 - `window.lx.utils.crypto.md5`：MD5加密 `md5(str)`
 - `window.lx.utils.crypto.randomBytes`：生成随机字符串 `randomBytes(size)`
 - `window.lx.utils.crypto.rsaEncrypt`：RSA加密 `rsaEncrypt(buffer, key)`
+- `window.lx.utils.zlib.inflate`：解压 `inflate(buffer: Buffer) => Promise<Buffer>`（API版本v1.3.0新增）
+- `window.lx.utils.zlib.deflate`：压缩 `deflate(buffer: Buffer) => Promise<Buffer>`（API版本v1.3.0新增）
 
 目前仅提供以上工具方法，如果需要其他方法可以开issue讨论。
