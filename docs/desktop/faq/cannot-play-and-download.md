@@ -49,6 +49,9 @@ title: 歌曲无法试听与下载
 
 > 来源：<https://github.com/lyswhut/lx-music-desktop/issues/873#issuecomment-1146945724>
 
+
+若以上方式无效，尝试卸载软件，将其安装到系统盘，使用默认的安装路径即可，安装时选择 `为当前用户安装`，不要选`为所有用户安装`。
+
 ### 歌曲下载失败，提示 `ENOENT: no such file or directory, mkdir`
 
 更换下载歌曲位置（目录）即可解决（一般是设置的歌曲下载目录没有读写权限导致的）。
