@@ -6,7 +6,7 @@
 
 所用技术栈：
 
-- Electron 13
+- Electron 15+
 - Vue 3
 
 已支持的平台：
@@ -23,6 +23,7 @@
 
 使用常见问题请转至：[常见问题](/desktop/faq)
 
+目前本项目的原始发布地址只有**GitHub**及**蓝奏网盘**，其他渠道均为第三方转载发布，与本项目无关！
 
 import DocCardList from '@theme/DocCardList'
 
