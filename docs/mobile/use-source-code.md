@@ -13,7 +13,7 @@ title: 源码使用方法
 2. **安装Android开发环境:** 若你没有安装有安装Android开发环境，可以看环境准备的[React Native CLI Quickstart](https://reactnative.dev/docs/environment-setup)说明
 3. **拉取代码:** 克隆本仓库代码
 4. **安装依赖:** 在项目根目录打开命令行，执行命令：`npm install`，若此命令执行的过程中报错可以尝试百度报错内容找解决方法，或在此处贴出报错日志一起讨论解决
-5. 使用Android Studio打开项目根目录下的`android`文件夹，加载一遍`gradle`
+5. 使用Android Studio打开项目根目录下的`android`文件夹，同步一遍`gradle`
 
 #### 项目启动步骤
 
