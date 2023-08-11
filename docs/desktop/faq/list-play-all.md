@@ -1,6 +1,6 @@
 ---
 id: list-play-all
-sidebar_position: 1.6
+sidebar_position: 1.57
 title: 播放整个歌单或排行榜
 ---
 
