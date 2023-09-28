@@ -45,6 +45,14 @@ title: Scheme URL支持
 | --- | --- | ---
 | 搜索歌曲 | `music/search/{source}/{keywords}` | `source`（源，可选）<br />`keywords`（要搜索的内容，必须）<br />例：`music/search/kw/xxx`、`music/search/xxx`
 | 打开歌单 | `songlist/open/{source}/{id/url}` | `source`（源，必须）<br />`id/url`（歌单ID或歌单URL，必须）<br />例：`songlist/open/kw/123456`
+| 播放歌曲 | `player/play` |
+| 暂停播放 | `player/pause` |
+| 切换下一曲 | `player/skipNext` |
+| 切换上一曲 | `player/skipPrev` |
+| 切换播放或暂停 | `player/togglePlay` |
+| 收藏当前播放的歌曲 | `player/collect` |
+| 取消收藏当前播放的歌曲 | `player/uncollect` |
+| 不喜欢当前播放的歌曲 | `player/dislike` |
 
 #### 以URL传参的例子
 
@@ -52,5 +60,6 @@ title: Scheme URL支持
 
 - 打开歌单：`lxmusic://songlist/open/kw/3373919903`
 - 搜索歌曲：`lxmusic://music/search/%E7%AA%81%E7%84%B6%E7%9A%84%E8%87%AA%E6%88%91`
+- 切换下一曲：`lxmusic://player/skipNext`
 
 相关issue看：<https://github.com/lyswhut/lx-music-desktop/issues/1056>
