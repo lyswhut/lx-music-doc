@@ -16,7 +16,7 @@ title: 自定义源脚本编写说明
  */
 
 
-const { EVENT_NAMES, request, on, send } = window.lx
+const { EVENT_NAMES, request, on, send } = globalThis.lx
 
 const qualitys = {
   kw: {
@@ -99,15 +99,15 @@ send(EVENT_NAMES.inited, {
 - `@author `：脚本作者名字，可不填，不填时可以删除 @author
 - `@homepage `：脚本主页，可不填，不填时可以删除 @homepage
 
-## `window.lx`
+## `globalThis.lx`
 
 应用为脚本暴露的API对象。
 
-### `window.lx.version`
+### `globalThis.lx.version`
 
 自定义源API版本，API变更时此版本号将会更改（新增于v1.14.0之后）
 
-### `window.lx.EVENT_NAMES`
+### `globalThis.lx.EVENT_NAMES`
 
 常量事件名称对象，发送、注册事件时传入事件名时使用，可用值：
 
@@ -118,7 +118,7 @@ send(EVENT_NAMES.inited, {
 | `updateAlert` | 显示源更新弹窗，发送该事件时的参数：`{log, updateUrl}`<br />`log`：更新日志，必传，字符串类型，内容可以使用`\n`换行，最大长度1024，超过此长度后将被截取超出的部分<br />`updateUrl`：更新地址，用于引导用户去该地址更新源，选传，需为http协议的url地址，最大长度1024<br />此事件每次运行脚本只能调用一次（源版本v1.2.0新增）<br />例子：`lx.send(lx.EVENT_NAMES.updateAlert, { log: 'hello world', updateUrl: 'https://xxx.com' })`
 
 
-### `window.lx.on`
+### `globalThis.lx.on`
 
 事件注册方法，应用主动与脚本通信时使用：
 
@@ -127,12 +127,12 @@ send(EVENT_NAMES.inited, {
  * @param event_name 事件名
  * @param handler 事件处理回调 -- 注意：注册的回调必须返回 Promise 对象
  */
-window.lx.on(event_name, handler)
+globalThis.lx.on(event_name, handler)
 ```
 
 **注意：** 注册的回调必须返回 `Promise` 对象。
 
-### `window.lx.send`
+### `globalThis.lx.send`
 
 事件发送方法，脚本主动与应用通信时使用：
 
@@ -141,10 +141,10 @@ window.lx.on(event_name, handler)
  * @param event_name 事件名
  * @param datas 要传给应用的数据
  */
-window.lx.send(event_name, datas)
+globalThis.lx.send(event_name, datas)
 ```
 
-### `window.lx.request`
+### `globalThis.lx.request`
 
 HTTP请求方法，用于发送HTTP请求，此HTTP请求方法不受跨域规则限制：
 
@@ -155,20 +155,27 @@ HTTP请求方法，用于发送HTTP请求，此HTTP请求方法不受跨域规�
  * @param callback 请求结果的回调 入参：err, resp, body
  * @return 返回一个方法，调用此方法可以终止HTTP请求
  */
-const cancelHttp = window.lx.request(url, options, callback)
+const cancelHttp = globalThis.lx.request(url, options, callback)
 ```
 
-### `window.lx.utils`
+### `globalThis.lx.utils`
 
 应用提供给脚本的工具方法：
 
-- `window.lx.utils.buffer.from`：对应Node.js的 `Buffer.from`
-- `window.lx.utils.buffer.bufToString`：Buffer转字符串 `bufToString(buffer, format)`，`format`对应Node.js `Buffer.toString`的参数（v1.14.0之后新增）
-- `window.lx.utils.crypto.aesEncrypt`：AES加密 `aesEncrypt(buffer, mode, key, iv)`
-- `window.lx.utils.crypto.md5`：MD5加密 `md5(str)`
-- `window.lx.utils.crypto.randomBytes`：生成随机字符串 `randomBytes(size)`
-- `window.lx.utils.crypto.rsaEncrypt`：RSA加密 `rsaEncrypt(buffer, key)`
-- `window.lx.utils.zlib.inflate`：解压 `inflate(buffer: Buffer) => Promise<Buffer>`（API版本v1.3.0新增）
-- `window.lx.utils.zlib.deflate`：压缩 `deflate(buffer: Buffer) => Promise<Buffer>`（API版本v1.3.0新增）
+- `globalThis.lx.utils.buffer.from`：对应Node.js的 `Buffer.from`
+- `globalThis.lx.utils.buffer.bufToString`：Buffer转字符串 `bufToString(buffer, format)`，`format`对应Node.js `Buffer.toString`的参数（v1.14.0之后新增）
+- `globalThis.lx.utils.crypto.aesEncrypt`：AES加密 `aesEncrypt(buffer, mode, key, iv)`
+- `globalThis.lx.utils.crypto.md5`：MD5加密 `md5(str)`
+- `globalThis.lx.utils.crypto.randomBytes`：生成随机字符串 `randomBytes(size)`
+- `globalThis.lx.utils.crypto.rsaEncrypt`：RSA加密 `rsaEncrypt(buffer, key)`
+- `globalThis.lx.utils.zlib.inflate`：解压 `inflate(buffer: Buffer) => Promise<Buffer>`（API版本v1.3.0新增）
+- `globalThis.lx.utils.zlib.deflate`：压缩 `deflate(buffer: Buffer) => Promise<Buffer>`（API版本v1.3.0新增）
 
-目前仅提供以上工具方法，如果需要其他方法可以开issue讨论。
+### PC端自定义源与移动端自定义源的区别
+
+- 移动端 `init` 事件无 `openDevTools` 选项
+- 移动端 `lx.utils` 的某些方法不可用，对于不可用或部分可用的方法，背后会有括号说明
+- 移动端只有极少部分宿主环境API可用，详情看 可用宿主环境API 说明
+- 移动端新增了 `lx.env` 与 `lx.currentScriptInfo`
+
+以上是自定义源功能在PC端与移动端的区别，目前仅提供以上工具方法，如果需要其他方法可以开issue讨论。

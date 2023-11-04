@@ -18,7 +18,7 @@ title: 自定义源脚本编写说明
  */
 
 
-const { EVENT_NAMES, request, on, send } = window.lx
+const { EVENT_NAMES, request, on, send } = globalThis.lx
 
 const qualitys = {
   kw: {
@@ -67,7 +67,6 @@ on(EVENT_NAMES.request, ({ source, action, info }) => {
 // 脚本初始化完成后需要发送inited事件告知应用
 send(EVENT_NAMES.inited, {
   status: true, // 初始化成功 or 失败
-  openDevTools: false, // 是否打开开发者工具，方便用于调试脚本
   sources: { // 当前脚本支持的源
     kw: { // 支持的源对象，可用key值：kw/kg/tx/wy/mg
       name: '酷我音乐',
@@ -101,37 +100,37 @@ send(EVENT_NAMES.inited, {
 - `@author `：脚本作者名字，可不填，不填时可以删除 @author
 - `@homepage `：脚本主页，可不填，不填时可以删除 @homepage
 
-## `window.lx`
+## `globalThis.lx`
 
 应用为脚本暴露的API对象。
 
-### `window.lx.version`
+### `globalThis.lx.version`
 
 自定义源API版本，API变更时此版本号将会更改（新增于v1.14.0之后）
 
-### `window.lx.env`
+### `globalThis.lx.env`
 
 自定义源运行环境，移动端将固定是 `mobile`
 
-### `window.lx.currentScriptInfo`
+### `globalThis.lx.currentScriptInfo`
 
 当前自定义源脚本信息（导入时在头部解析到的）：
 
-- `window.lx.currentScriptInfo.name`：源名字，即 `@name` 的内容
-- `window.lx.currentScriptInfo.description`：源描述，即 `@description` 的内容
+- `globalThis.lx.currentScriptInfo.name`：源名字，即 `@name` 的内容
+- `globalThis.lx.currentScriptInfo.description`：源描述，即 `@description` 的内容
 
-### `window.lx.EVENT_NAMES`
+### `globalThis.lx.EVENT_NAMES`
 
 常量事件名称对象，发送、注册事件时传入事件名时使用，可用值：
 
 | 事件名 | 描述
 | --- | ---
-| `inited` | 脚本初始化完成后发送给应用的事件名，发送该事件时需要传入以下信息：`{status, sources, openDevTools}`<br />`status`：初始化结果（`true`成功，`false`失败）<br />`openDevTools`：是否打开DevTools，此选项可用于开发脚本时的调试<br />`sources`：支持的源信息对象，<br />`sources[kw/kg/tx/wy/mg].name`：源的名字（目前非必须）<br />`sources[kw/kg/tx/wy/mg].type`：源类型，目前固定值需为`music`<br />`sources[kw/kg/tx/wy/mg].actions`：支持的actions，由于目前只支持`musicUrl`，所以固定传`['musicUrl']`即可<br />`sources[kw/kg/tx/wy/mg].qualitys`：该源支持的音质列表，有效的值为`['128k', '320k', 'flac', 'flac24bit']`，该字段用于控制应用可用的音质类型
+| `inited` | 脚本初始化完成后发送给应用的事件名，发送该事件时需要传入以下信息：`{status, sources}`<br />`status`：初始化结果（`true`成功，`false`失败）<br />`sources`：支持的源信息对象，<br />`sources[kw/kg/tx/wy/mg].name`：源的名字（目前非必须）<br />`sources[kw/kg/tx/wy/mg].type`：源类型，目前固定值需为`music`<br />`sources[kw/kg/tx/wy/mg].actions`：支持的actions，由于目前只支持`musicUrl`，所以固定传`['musicUrl']`即可<br />`sources[kw/kg/tx/wy/mg].qualitys`：该源支持的音质列表，有效的值为`['128k', '320k', 'flac', 'flac24bit']`，该字段用于控制应用可用的音质类型
 | `request` | 应用API请求事件名，回调入参：`handler({ source, action, info})`，回调必须返回`Promise`对象<br />`source`：音乐源，可能的值取决于初始化时传入的`sources`对象的源key值<br />`info`：请求附加信息，内容根据`action`变化<br />`action`：请求操作类型，目前只有`musicUrl`，即获取音乐URL链接，需要在 Promise 返回歌曲 url，`info`的结构：`{type, musicInfo}`，`info.type`：音乐质量，可能的值有`128k` / `320k` / `flac` / `flac24bit`（取决于初始化时对应源传入的`qualitys`值中的一个），`info.musicInfo`：音乐信息对象，里面有音乐ID、名字等信息
 | `updateAlert` | 显示源更新弹窗，发送该事件时的参数：`{log, updateUrl}`<br />`log`：更新日志，必传，字符串类型，内容可以使用`\n`换行，最大长度1024，超过此长度后将被截取超出的部分<br />`updateUrl`：更新地址，用于引导用户去该地址更新源，选传，需为http协议的url地址，最大长度1024<br />此事件每次运行脚本只能调用一次（源版本v1.2.0新增）<br />例子：`lx.send(lx.EVENT_NAMES.updateAlert, { log: 'hello world', updateUrl: 'https://xxx.com' })`
 
 
-### `window.lx.on`
+### `globalThis.lx.on`
 
 事件注册方法，应用主动与脚本通信时使用：
 
@@ -140,12 +139,12 @@ send(EVENT_NAMES.inited, {
  * @param event_name 事件名
  * @param handler 事件处理回调 -- 注意：注册的回调必须返回 Promise 对象
  */
-window.lx.on(event_name, handler)
+globalThis.lx.on(event_name, handler)
 ```
 
 **注意：** 注册的回调必须返回 `Promise` 对象。
 
-### `window.lx.send`
+### `globalThis.lx.send`
 
 事件发送方法，脚本主动与应用通信时使用：
 
@@ -154,10 +153,10 @@ window.lx.on(event_name, handler)
  * @param event_name 事件名
  * @param datas 要传给应用的数据
  */
-window.lx.send(event_name, datas)
+globalThis.lx.send(event_name, datas)
 ```
 
-### `window.lx.request`
+### `globalThis.lx.request`
 
 HTTP请求方法，用于发送HTTP请求，此HTTP请求方法不受跨域规则限制：
 
@@ -168,24 +167,32 @@ HTTP请求方法，用于发送HTTP请求，此HTTP请求方法不受跨域规�
  * @param callback 请求结果的回调 入参：err, resp, body
  * @return 返回一个方法，调用此方法可以终止HTTP请求
  */
-const cancelHttp = window.lx.request(url, options, callback)
+const cancelHttp = globalThis.lx.request(url, options, callback)
 ```
 
-### `window.lx.utils`
+### `globalThis.lx.utils`
 
 应用提供给脚本的工具方法：
 
-- `window.lx.utils.buffer.from`：对应Node.js的 `Buffer.from`（部分实现，格式只支持`base64`、`hex`、`utf8`字符串）
-- `window.lx.utils.buffer.bufToString`：Buffer转字符串 `bufToString(buffer, format)`，`format`对应Node.js `Buffer.toString`的参数（部分实现，格式只支持`base64`、`hex`、`utf8`字符串）
-- `window.lx.utils.crypto.aesEncrypt`：AES加密 `aesEncrypt(buffer, mode, key, iv)`（部分实现，算法只支持 `aes-128-cbc`、`aes-128-ecb`）
-- `window.lx.utils.crypto.md5`：MD5加密 `md5(str)`
-- `window.lx.utils.crypto.randomBytes`：生成随机字符串 `randomBytes(size)`
-- `window.lx.utils.crypto.rsaEncrypt`：RSA加密 `rsaEncrypt(buffer, key)`
-- ~~`window.lx.utils.zlib.inflate`：解压 `inflate(buffer: Buffer) => Promise<Buffer>`~~（移动端环境目前未实现）
-- ~~`window.lx.utils.zlib.deflate`：压缩 `deflate(buffer: Buffer) => Promise<Buffer>`~~（移动端环境目前未实现）
+- `globalThis.lx.utils.buffer.from`：对应Node.js的 `Buffer.from`（部分实现，格式只支持`base64`、`hex`、`utf8`字符串）
+- `globalThis.lx.utils.buffer.bufToString`：Buffer转字符串 `bufToString(buffer, format)`，`format`对应Node.js `Buffer.toString`的参数（部分实现，格式只支持`base64`、`hex`、`utf8`字符串）
+- `globalThis.lx.utils.crypto.aesEncrypt`：AES加密 `aesEncrypt(buffer, mode, key, iv)`（部分实现，算法只支持 `aes-128-cbc`、`aes-128-ecb`）
+- `globalThis.lx.utils.crypto.md5`：MD5加密 `md5(str)`
+- `globalThis.lx.utils.crypto.randomBytes`：生成随机字符串 `randomBytes(size)`
+- `globalThis.lx.utils.crypto.rsaEncrypt`：RSA加密 `rsaEncrypt(buffer, key)`
+- ~~`globalThis.lx.utils.zlib.inflate`：解压 `inflate(buffer: Buffer) => Promise<Buffer>`~~（移动端环境目前未实现）
+- ~~`globalThis.lx.utils.zlib.deflate`：压缩 `deflate(buffer: Buffer) => Promise<Buffer>`~~（移动端环境目前未实现）
 
 ### 可用宿主环境API
 
 - `setTimeout`
+- `window` （运行环境本身无`window`对象，但为了兼容PC端例子中读取`window`对象的写法，而将它映射到 `globalThis` 对象，所以实际上它指向的是运行环境的全局对象）
 
-目前仅提供以上工具方法及宿主API，如果需要其他方法可以开issue讨论。
+### 移动端自定义源与PC端自定义源的区别
+
+- 移动端 `init` 事件无 `openDevTools` 选项
+- 移动端 `lx.utils` 的某些方法不可用，对于不可用或部分可用的方法，背后会有括号说明
+- 移动端只有极少部分宿主环境API可用，详情看 可用宿主环境API 说明
+- 移动端新增了 `lx.env` 与 `lx.currentScriptInfo`
+
+以上是自定义源功能在移动端与PC端的区别，目前仅提供以上工具方法及宿主API，如果需要其他方法可以开issue讨论。
