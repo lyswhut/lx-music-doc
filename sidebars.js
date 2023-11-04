@@ -93,6 +93,11 @@ const sidebars = {
         },
         {
           type: 'doc',
+          id: 'mobile/custom-source', // document ID
+          label: '自定义源脚本编写说明', // sidebar label
+        },
+        {
+          type: 'doc',
           id: 'mobile/use-source-code', // document ID
           label: '源码使用方法', // sidebar label
         },
