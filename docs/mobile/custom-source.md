@@ -106,7 +106,7 @@ send(EVENT_NAMES.inited, {
 
 ### `globalThis.lx.version`
 
-自定义源API版本，API变更时此版本号将会更改（新增于v1.14.0之后）
+自定义源API版本，API变更时此版本号将会更改
 
 ### `globalThis.lx.env`
 
@@ -194,5 +194,6 @@ const cancelHttp = globalThis.lx.request(url, options, callback)
 - 移动端 `lx.utils` 的某些方法不可用，对于不可用或部分可用的方法，背后会有括号说明
 - 移动端只有极少部分宿主环境API可用，详情看 可用宿主环境API 说明
 - 移动端新增了 `lx.env` 与 `lx.currentScriptInfo`
+- 移动端由于预加载脚本与自定义脚本运行在同一个环境下，出于对预加载脚本的安全性考虑，除了 `Function.prototype.toString`、`Function.prototype.toLocaleString`、`Object.prototype.toString` 外的其他JavaScript内置属性都会被冻结，所以类似 `Array.prototype.push = ...` 的代码都将无效，但扩展内置对象的行为是允许的，例如：`Array.prototype.myPush = ...`
 
 以上是自定义源功能在移动端与PC端的区别，目前仅提供以上工具方法及宿主API，如果需要其他方法可以开issue讨论。
