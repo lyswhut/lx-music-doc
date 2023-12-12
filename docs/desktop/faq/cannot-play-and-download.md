@@ -28,7 +28,7 @@ title: 歌曲无法试听与下载
 2. 尝试切换其他歌曲（或直接搜索该歌曲），若全部歌曲都无法试听与下载则进行下一步
 3. 尝试到 设置-音乐来源 切换到其他接口
 4. 尝试切换网络，比如用手机开热点（所有歌曲都提示请求异常时可通过此方法解决，或等一两天后再试）
-5. 若还不行请到这个链接查看详情：<https://github.com/lyswhut/lx-music-desktop/issues/5>
+5. 若还不行请到这个链接查看详情：[https://github.com/lyswhut/lx-music-desktop/issues/5](https://github.com/lyswhut/lx-music-desktop/issues/5)
 6. 若没有在第5条链接中的第一条评论中看到接口无法使用的说明，则应该是你网络无法访问接口服务器的问题，如果接口有问题我会在那里说明。
 
 想要知道是不是自己网络的问题可以看看`http://ts.tempmusics.tk`能不能在浏览器打开，浏览器显示403是正常的，如果不是403那就证明所在网络无法访问接口服务器。
@@ -49,7 +49,7 @@ title: 歌曲无法试听与下载
 
 按<kbd>windows</kbd>+<kbd>r</kbd>键打开“运行”窗口，输入`inetcpl.cpl`后回车，在打开的 Internet选项 对话框中，切换到 连接 -> 局域网设置，在弹出的新窗口中把代理服务器下的勾去掉，如果自动配置下的勾也有被勾选，那么建议也去掉，最后按确定关闭所有弹窗，重启LX Music。
 
-> 来源：<https://github.com/lyswhut/lx-music-desktop/issues/873#issuecomment-1146945724>
+> 来源：[https://github.com/lyswhut/lx-music-desktop/issues/873#issuecomment-1146945724](https://github.com/lyswhut/lx-music-desktop/issues/873#issuecomment-1146945724)
 :::
 
 

@@ -45,7 +45,7 @@ PC端与移动端处在同一个局域网（路由器的网络）下或在公网
 
 第一次同步成功后，以后再同步时将会自动根据两边设备的列表内容合并同步，不信你可以在同步完成后断开两边的连接，然后在两边增删一些歌曲或列表后再同步试试看~😉
 
-更多说明看：<https://github.com/lyswhut/lx-music-desktop/issues/1543>
+更多说明看：[https://github.com/lyswhut/lx-music-desktop/issues/1543](https://github.com/lyswhut/lx-music-desktop/issues/1543)
 
 ### 连接同步服务失败的可能原因
 

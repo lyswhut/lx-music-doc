@@ -13,8 +13,8 @@ Windows 7 未开启 Aero 效果时桌面歌词会有问题，详情看上面的 
 
 此问题似乎是Electron的Bug，翻阅electron的issue列表发现该Bug以存在很久了，遗憾的是没有一直都没有修复，由于我没有装MAC平台的电脑，没法重现，就没再去electron提issue，更多信息看：
 
-- <https://github.com/electron/electron/issues/21173>
-- <https://github.com/electron/electron/issues/14304>
+- [https://github.com/electron/electron/issues/21173](https://github.com/electron/electron/issues/21173)
+- [https://github.com/electron/electron/issues/14304](https://github.com/electron/electron/issues/14304)
 
 ### Linux 系统下桌面歌词窗口异常
 

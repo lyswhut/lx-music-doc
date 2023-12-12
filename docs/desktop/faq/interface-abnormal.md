@@ -22,7 +22,7 @@ title: 界面异常（界面显示不完整、界面无法显示）
 :::
 
 对于界面无法显示，任务栏里也没看到图标，但是任务管理器里面看到进程的问题，还可尝试更换软件安装目录（对于安装版需要先卸载再换目录安装，绿色版直接剪切移动即可，只要目录换了就行），<br />
-此方法的相关讨论看：<https://github.com/lyswhut/lx-music-desktop/issues/943#issuecomment-1217832186>
+此方法的相关讨论看：[https://github.com/lyswhut/lx-music-desktop/issues/943#issuecomment-1217832186](https://github.com/lyswhut/lx-music-desktop/issues/943#issuecomment-1217832186)
 
 ### Windows 7 下界面异常
 
@@ -43,11 +43,11 @@ title: 界面异常（界面显示不完整、界面无法显示）
 
 对于软件启动后，可以在任务栏看到软件，但软件界面在桌面上无任何显示，或者整个界面偶尔闪烁的情况。
 
-原始问题看：<https://github.com/electron/electron/issues/19569#issuecomment-522231083>
+原始问题看：[https://github.com/electron/electron/issues/19569#issuecomment-522231083](https://github.com/electron/electron/issues/19569#issuecomment-522231083)
 
 解决办法：下载`.NET Framework 4.7.1`或**更高**版本安装即可(建议安装最新版，若安装过程中遇到问题可尝试自行百度解决)。
 
-微软官方下载地址：<https://dotnet.microsoft.com/download/dotnet-framework>
+微软官方下载地址：[https://dotnet.microsoft.com/download/dotnet-framework](https://dotnet.microsoft.com/download/dotnet-framework)
 
 下载`Runtime(运行时)`版即可，安装完成后可能需要重启才生效，**若出现闪烁的情况**，可阅读下面的**Windows 7 下整个界面闪烁**解决。
 

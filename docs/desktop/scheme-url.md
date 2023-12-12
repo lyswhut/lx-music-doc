@@ -6,7 +6,7 @@ title: Scheme URL支持
 
 从v1.17.0起支持 Scheme URL，可以使用此功能从浏览器等场景下调用LX Music，我们开发了一个[油猴脚本](https://github.com/lyswhut/lx-music-script#readme)配套使用
 
-脚本安装地址：<https://greasyfork.org/zh-CN/scripts/438148>
+脚本安装地址：[https://greasyfork.org/zh-CN/scripts/438148](https://greasyfork.org/zh-CN/scripts/438148)
 
 以下是目前可用的Scheme URL调用方式：
 
@@ -62,4 +62,4 @@ title: Scheme URL支持
 - 搜索歌曲：`lxmusic://music/search/%E7%AA%81%E7%84%B6%E7%9A%84%E8%87%AA%E6%88%91`
 - 切换下一曲：`lxmusic://player/skipNext`
 
-相关issue看：<https://github.com/lyswhut/lx-music-desktop/issues/1056>
+相关issue看：[https://github.com/lyswhut/lx-music-desktop/issues/1056](https://github.com/lyswhut/lx-music-desktop/issues/1056)

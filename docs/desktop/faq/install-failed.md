@@ -47,5 +47,5 @@ title: 安装失败
 
 还可以参考：
 
-- <http://www.pc6.com/edu/168719.html>
-- <https://blog.csdn.net/for641/article/details/104811538>
+- [http://www.pc6.com/edu/168719.html](http://www.pc6.com/edu/168719.html)
+- [https://blog.csdn.net/for641/article/details/104811538](https://blog.csdn.net/for641/article/details/104811538)

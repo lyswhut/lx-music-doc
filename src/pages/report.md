@@ -15,8 +15,8 @@ title: 问题反馈
 
 在阅读文档中的**常见问题**后仍然无法解决或找不到解决方法，可以到以下地址或者加企鹅群`830125506`反馈！
 
-- 电脑版GitHub反馈地址：<https://github.com/lyswhut/lx-music-desktop/issues>
-- 手机版GitHub反馈地址：<https://github.com/lyswhut/lx-music-mobile/issues>
+- 电脑版GitHub反馈地址：[https://github.com/lyswhut/lx-music-desktop/issues](https://github.com/lyswhut/lx-music-desktop/issues)
+- 手机版GitHub反馈地址：[https://github.com/lyswhut/lx-music-mobile/issues](https://github.com/lyswhut/lx-music-mobile/issues)
 
 GitHub反馈前请先搜索是否已存在相关的issue
 

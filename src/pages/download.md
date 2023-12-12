@@ -5,17 +5,17 @@ title: 软件下载
 
 ## 电脑版
 
-<https://github.com/lyswhut/lx-music-desktop/releases>
+[https://github.com/lyswhut/lx-music-desktop/releases](https://github.com/lyswhut/lx-music-desktop/releases)
 
 ## 手机版
 
-<https://github.com/lyswhut/lx-music-mobile/releases>
+[https://github.com/lyswhut/lx-music-mobile/releases](https://github.com/lyswhut/lx-music-mobile/releases)
 
 ## 网盘下载（推荐国内用户在网盘下载）
 
 推荐国内用户使用此方式下载，软件发布更新时，此网盘的安装包会同步更新到最新版本。
 
-<https://www.lanzoui.com/b0bf2cfa/> 
+[https://www.lanzoui.com/b0bf2cfa/](https://www.lanzoui.com/b0bf2cfa/) 
 
 密码：`glqw`
 
@@ -41,7 +41,7 @@ title: 软件下载
 
 :::tip
 绿色版（免安装版）已经被压缩成7z文件（以.7z结尾），需要用 解压软件 解压后才可以运行，
-若你的电脑没有解压缩软件，推荐使用这个软件：<https://www.bandisoft.com/bandizip/old/6/>
+若你的电脑没有解压缩软件，推荐使用这个软件：[https://www.bandisoft.com/bandizip/old/6/](https://www.bandisoft.com/bandizip/old/6/)
 :::
 
 以 `.dmg` 结尾的文件为在 MAC 系统上运行的版本。
