@@ -25,6 +25,7 @@ const qualitys = {
     flac: 'flac',
     flac24bit: 'flac24bit',
   },
+  local: {},
 }
 const httpRequest = (url, options) => new Promise((resolve, reject) => {
   request(url, options, (err, resp) => {
@@ -85,13 +86,13 @@ on(EVENT_NAMES.request, ({ source, action, info }) => {
       })
     // action 为 lyric 时需要在 Promise 返回歌词信息
     case 'lyric':
-      return apis[source].musicUrl(info.musicInfo, qualitys[source][info.type]).catch(err => {
+      return apis[source].musicUrl(info.musicInfo).catch(err => {
         console.log(err)
         return Promise.reject(err)
       })
     // action 为 pic 时需要在 Promise 返回歌曲封面 url
     case 'pic':
-      return apis[source].musicUrl(info.musicInfo, qualitys[source][info.type]).catch(err => {
+      return apis[source].musicUrl(info.musicInfo).catch(err => {
         console.log(err)
         return Promise.reject(err)
       })
