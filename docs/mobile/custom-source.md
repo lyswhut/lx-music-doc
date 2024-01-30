@@ -50,7 +50,8 @@ const apis = {
 // info 请求附加信息，内容根据action变化
 // action 请求操作类型，目前只有musicUrl，即获取音乐URL链接，
 //    当action为musicUrl时info的结构：{type, musicInfo}，
-//        info.type：音乐质量，可能的值有128k / 320k / flac / flac24bit（取决于初始化时对应源传入的qualitys值中的一个），
+//        info.type：音乐质量，可能的值有128k / 320k / flac / flac24bit（取决于初始化时对应源传入的qualitys值中的一个）
+//                   特殊情况：源为local时，该值为 null
 //        info.musicInfo：音乐信息对象，里面有音乐ID、名字等信息
 on(EVENT_NAMES.request, ({ source, action, info }) => {
   // 被调用时必须返回 Promise 对象
@@ -61,18 +62,38 @@ on(EVENT_NAMES.request, ({ source, action, info }) => {
         console.log(err)
         return Promise.reject(err)
       })
+    // action 为 lyric 时需要在 Promise 返回歌词信息
+    case 'lyric':
+      return apis[source].musicUrl(info.musicInfo, qualitys[source][info.type]).catch(err => {
+        console.log(err)
+        return Promise.reject(err)
+      })
+    // action 为 pic 时需要在 Promise 返回歌曲封面 url
+    case 'pic':
+      return apis[source].musicUrl(info.musicInfo, qualitys[source][info.type]).catch(err => {
+        console.log(err)
+        return Promise.reject(err)
+      })
   }
 })
 
 // 脚本初始化完成后需要发送inited事件告知应用
 // 注意：初始化事件被发送前，执行脚本的过程中出现任何错误将视为脚本初始化失败
 send(EVENT_NAMES.inited, {
+  openDevTools: false, // 是否打开开发者工具，方便用于调试脚本
   sources: { // 当前脚本支持的源
-    kw: { // 支持的源对象，可用key值：kw/kg/tx/wy/mg
+    kw: { // 支持的源对象，可用key值：kw/kg/tx/wy/mg/local
       name: '酷我音乐',
       type: 'music',  // 目前固定为 music
-      actions: ['musicUrl'], // 目前固定为 ['musicUrl']
+      actions: ['musicUrl'], // 除了local外，其他的固定为 ['musicUrl']
       qualitys: ['128k', '320k', 'flac', 'flac24bit'], // 当前脚本的该源所支持获取的Url音质，有效的值有：['128k', '320k', 'flac', 'flac24bit']
+    },
+    // ...
+    local: {
+      name: '本地音乐',
+      type: 'music',  // 目前固定为 music
+      actions: ['musicUrl', 'lyric', 'pic'], // 源为 local 时，支持 ['musicUrl', 'lyric', 'pic']
+      qualitys: [], // 源为 local 时，该值传入空数组即可
     },
   },
 })
@@ -129,8 +150,8 @@ send(EVENT_NAMES.inited, {
 
 | 事件名 | 描述
 | --- | ---
-| `inited` | 脚本初始化完成后发送给应用的事件名，发送该事件时需要传入以下信息：`{ sources }`<br />`sources`：支持的源信息对象，<br />`sources[kw/kg/tx/wy/mg].name`：源的名字（目前非必须）<br />`sources[kw/kg/tx/wy/mg].type`：源类型，目前固定值需为`music`<br />`sources[kw/kg/tx/wy/mg].actions`：支持的actions，由于目前只支持`musicUrl`，所以固定传`['musicUrl']`即可<br />`sources[kw/kg/tx/wy/mg].qualitys`：该源支持的音质列表，有效的值为`['128k', '320k', 'flac', 'flac24bit']`，该字段用于控制应用可用的音质类型
-| `request` | 应用API请求事件名，回调入参：`handler({ source, action, info})`，回调必须返回`Promise`对象<br />`source`：音乐源，可能的值取决于初始化时传入的`sources`对象的源key值<br />`info`：请求附加信息，内容根据`action`变化<br />`action`：请求操作类型，目前只有`musicUrl`，即获取音乐URL链接，需要在 Promise 返回歌曲 url，`info`的结构：`{type, musicInfo}`，`info.type`：音乐质量，可能的值有`128k` / `320k` / `flac` / `flac24bit`（取决于初始化时对应源传入的`qualitys`值中的一个），`info.musicInfo`：音乐信息对象，里面有音乐ID、名字等信息
+| `inited` | 脚本初始化完成后发送给应用的事件名，发送该事件时需要传入以下信息：`{ sources }`<br />`sources`：支持的源信息对象，<br />`sources[kw/kg/tx/wy/mg/local].name`：源的名字（目前非必须）<br />`sources[kw/kg/tx/wy/mg/local].type`：源类型，目前固定值需为`music`<br />`sources[kw/kg/tx/wy/mg/local].actions`：支持的actions数组，`local`源可用值为`musicUrl`、`lyric`、`pic`，其他源只支持`musicUrl`<br />`sources[kw/kg/tx/wy/mg/local].qualitys`：该源支持的音质列表，有效的值为`['128k', '320k', 'flac', 'flac24bit']`，该字段用于控制应用可用的音质类型，当`source`为`local`时，传入`[]`即可
+| `request` | 应用API请求事件名，回调入参：`handler({ source, action, info})`，回调必须返回`Promise`对象<br />`source`：音乐源，可能的值取决于初始化时传入的`sources`对象的源key值<br />`info`：请求附加信息，内容根据`action`变化<br />`action`：请求操作类型，取决于发送`inited`事件时传入的`actions`数组中的值<br />当为`musicUrl`时表示获取音乐URL链接，`info`的结构：`{type, musicInfo}`，`info.type`：音乐质量，可能的值有`128k` / `320k` / `flac` / `flac24bit` （取决于初始化时对应源传入的`qualitys`值中的一个，`source`为`local`时该值为`null`），`info.musicInfo`：音乐信息对象，里面有音乐ID、名字等信息，该操作需要在 Promise 返回http形式的歌曲 url<br />当为`lyric`时，表示获取音乐歌词，`info`的结构：`{musicInfo}`，该操作需要在 Promise 返回歌曲的歌词信息（结构为`{lryic,tlryic,rlyric,lxlyric}`，例如：`{lyric:'..',tlryic:...}`）<br />当为`pic`时，表示获取音乐封面图片，`info`的结构：`{musicInfo}`，该操作需要在 Promise 返回http形式的歌曲封面图片url
 | `updateAlert` | 显示源更新弹窗，发送该事件时的参数：`{log, updateUrl}`<br />`log`：更新日志，必传，字符串类型，内容可以使用`\n`换行，最大长度1024，超过此长度后将被截取超出的部分<br />`updateUrl`：更新地址，用于引导用户去该地址更新源，选传，需为http协议的url地址，最大长度1024<br />此事件每次运行脚本只能调用一次（源版本v1.2.0新增）<br />例子：`lx.send(lx.EVENT_NAMES.updateAlert, { log: 'hello world', updateUrl: 'https://xxx.com' })`
 
 **注意：初始化事件被发送前，执行脚本的过程中出现任何错误将视为脚本初始化失败**
