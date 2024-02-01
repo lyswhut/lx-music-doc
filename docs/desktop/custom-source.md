@@ -44,7 +44,7 @@ const apis = {
   },
   local: {
     musicUrl(info) {
-      ireturn httpRequest('http://xxx').then(data => {
+      return httpRequest('http://xxx').then(data => {
         return data.url
       })
     },
