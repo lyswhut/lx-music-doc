@@ -14,10 +14,6 @@ title: 状态栏歌词
 ---
 
 从v0.13.0起，有了一个显示状态栏歌词的方式：通过调用第三方Xposed模块【[墨•状态栏歌词](https://github.com/Block-Network/StatusBarLyric)】的API支持来状态栏歌词。
-但考虑到要依赖第三方应用，并且是Xposed模块，预计用的人会比较少，所以暂不考虑将此特性合并到主分支（不会包含在正式版中）。
+但考虑到要依赖第三方应用，并且是Xposed模块，预计用的人会比较少，所以暂不考虑将此特性合并到主分支。
 
-现在此特性被放到`statusbar-lyric`分支上，并设置了构建任务，想要此功能的人可以去这里下载构建包：[https://github.com/lyswhut/lx-music-mobile/actions/workflows/statusbar-lyric.yml](https://github.com/lyswhut/lx-music-mobile/actions/workflows/statusbar-lyric.yml)
-
-:::tip
-这需要登录GitHub才能下载，如果你不知道怎么下载，可以去企鹅测试群(`768786588`)文件下载（文件名带`sl`后缀）
-:::
+包含此特性的代码在`statusbar_lyric`分支上，想要此功能的人可以在 [releases](https://github.com/lyswhut/lx-music-mobile/releases) 下载版本号带 **`sl`** 的包。
