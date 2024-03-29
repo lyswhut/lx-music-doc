@@ -41,6 +41,11 @@ const sidebars = {
         },
         {
           type: 'doc',
+          id: 'desktop/open-api', // document ID
+          label: '开放API服务', // sidebar label
+        },
+        {
+          type: 'doc',
           id: 'desktop/run-params', // document ID
           label: '启动参数', // sidebar label
         },
