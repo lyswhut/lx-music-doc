@@ -3,7 +3,11 @@ id: open-api
 title: 开放API服务
 ---
 
-从 v2.7.0 起支持开放API服务，启用该功能后，将会在本地启动一个http服务，提供以下接口供第三方软件调用：
+从 v2.7.0 起支持开放API服务，启用该功能后，将会在本地启动一个http服务，提供以下接口供第三方软件调用。
+
+:::tip
+若你要实时获取播放器状态，我们强烈建议使用SSE接口来获取状态，而不是通过轮询的方式重复调用状态接口。
+:::
 
 ### 获取播放器状态
 
@@ -72,7 +76,15 @@ title: 开放API服务
 
 ### 播放器状态订阅
 
-SSE事件流接口，请求后将保持连接状态，数据将通过文本事件流的形式返回，更多详情请阅读 [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events)
+SSE事件流接口，本接口接受一个普通的 HTTP GET 请求，只是请求会保持长链接状态，播放器的状态在变更时通过文本事件流的形式将其实时返回，你可以使用以下命令测试该接口：
+
+```bash
+curl -N http://127.0.0.1:23330/subscribe-player-status
+```
+
+其他语言使用该接口的例子：[lx-music-desktop/1824#issuecomment-2027888681](https://github.com/lyswhut/lx-music-desktop/issues/1824#issuecomment-2027888681)
+
+更多详情请阅读 [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events)
 
 接口地址：`/subscribe-player-status`
 
