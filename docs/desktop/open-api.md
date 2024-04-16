@@ -15,6 +15,12 @@ title: 开放API服务
 
 请求方法：`GET`
 
+请求入参：
+
+| 参数名称 | 描述 |
+| --- | ---  |
+| `filter` | 过滤返回的字段，可选，可用名字看响应数据格式的字段名，多个用 `,` 分隔。<br/> 默认值：`status,name,singer,albumName,lyricLineText,duration,progress,playbackRate` |
+
 响应数据格式：JSON
 
 | 字段名 | 描述 |
@@ -28,6 +34,9 @@ title: 开放API服务
 | `playbackRate` | 播放速率 |
 | `picUrl` | 歌曲封面图片链接，可能为 HTTP链接 或 [Data Url](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) |
 | `lyricLineText` | 当前句歌词文本 |
+| `lyricLineAllText` | 当前句歌词及扩展歌词文本（扩展歌词包含翻译、罗马音等，按换行符分割） |
+| `lyric` | 当前歌曲LRC歌词文本 |
+| `collect` | 当前歌曲是否已收藏 |
 
 响应数据例子：
 
@@ -94,7 +103,7 @@ curl -N http://127.0.0.1:23330/subscribe-player-status
 
 | 参数名称 | 描述 |
 | --- | ---  |
-| `filter` | 过滤订阅的事件名，可选，可用名字看响应数据格式的事件名称，多个用 `,` 分隔，若为空则订阅所有事件 |
+| `filter` | 过滤返回的字段，可选，可用名字看响应数据格式的字段名，多个用 `,` 分隔。<br/> 默认值：`status,name,singer,albumName,lyricLineText,duration,progress,playbackRate` |
 
 响应数据格式：SSE文本事件流
 
@@ -109,6 +118,7 @@ curl -N http://127.0.0.1:23330/subscribe-player-status
 | `playbackRate` | 播放速率 |
 | `picUrl` | 歌曲封面图片链接，可能为 HTTP链接 或 [Data Url](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) |
 | `lyricLineText` | 当前句歌词文本 |
+| `lyricLineAllText` | 当前句歌词及扩展歌词文本（扩展歌词包含翻译、罗马音等，按换行符分割） |
 | `lyric` | 当前歌曲LRC歌词文本 |
 | `collect` | 当前歌曲是否已收藏 |
 
