@@ -1,6 +1,6 @@
 ---
 id: scheme-url
-title: Scheme URL支持
+title: Scheme URL 支持
 ---
 
 
@@ -29,6 +29,7 @@ title: Scheme URL支持
 | 播放歌单 | `songlist/play` | `source<String>`（源，必须）<br />`id<String/Number>`（歌单ID，可选）<br />`url<String>`（歌单URL，可选）其中`id`与`url`必需传一个<br />`index<Number>`（播放第几首歌，可选，从0开始）
 | 搜索歌曲 | `music/search` | `keywords<String/Number>`（要搜索的内容，必须）<br />`source<String>`（源，可选）
 | 播放歌曲 | `music/play` | `name<String>`（歌曲名，必传）<br />`singer<String>`（艺术家名，必传）<br />`source<String>`（源，必传）<br />`songmid<String/Number>`（歌曲ID，必传）<br />`img<String>`（歌曲图片链接，选传）<br />`albumId<String/Number>`（歌曲专辑ID，选传）<br />`interval<String>`（格式化后的歌曲时长，选传，例：`03:55`）<br />`albumName<String>`（歌曲专辑名称，选传）<br />`types<Object>`（歌曲可用音质数组，必传，<br />数组格式：`[{"type": "<音质>", size: "<格式化后的文件大小，选传>", hash: "<kg源必传>"}]`，<br />例：`[{"type": "128k", size: "3.56M"}, {"type": "320k", size: null}]`）<br /><br />以下为平台特定参数：<br />`hash<String>`（歌曲hash，kg源必传）<br />`strMediaMid<String>`（歌曲strMediaMid，tx源必传）<br />`albumMid<String>`（歌曲albumMid，tx源专用，选传）<br />`copyrightId<String>`（歌曲copyrightId，mg源必传）<br />`lrcUrl<String>`、`trcUrl<String>`、`mrcUrl<String>`（歌曲lrcUrl、trcUrl与mrcUrl，mg源专用，选传）
+| 搜索并播放歌曲 | `music/searchPlay` | `name<String>`（歌曲名，必须）<br />`singer<String>`（歌手，可选）<br />`albumName<String>`（专辑名，可选）<br />`interval<String>`（时长，`xx:xx` 的形式，可选）<br />`playLater<Boolean>`（是否稍后播放，可选，默认 `false` 立即播放）
 
 #### 以data传参的例子
 
@@ -44,6 +45,7 @@ title: Scheme URL支持
 | 描述 | URL | 参数
 | --- | --- | ---
 | 搜索歌曲 | `music/search/{source}/{keywords}` | `source`（源，可选）<br />`keywords`（要搜索的内容，必须）<br />例：`music/search/kw/xxx`、`music/search/xxx`
+| 搜索并播放歌曲 | `music/searchPlay/{name-singer}` | `name-singer` （歌曲名，必须），可以只传入歌曲名，也可以传入`歌曲名-歌手名`
 | 打开歌单 | `songlist/open/{source}/{id/url}` | `source`（源，必须）<br />`id/url`（歌单ID或歌单URL，必须）<br />例：`songlist/open/kw/123456`
 | 播放歌曲 | `player/play` |
 | 暂停播放 | `player/pause` |

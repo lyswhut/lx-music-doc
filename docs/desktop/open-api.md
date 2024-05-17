@@ -139,4 +139,6 @@ data: "幸存者 Drifter"
 
 ```
 
+目前开放API没有提供播放的控制支持，但如果是本地调用的话，你可以配合 [Scheme URL](./scheme-url.md) 控制播放器的播放/暂停、搜索并播放某歌曲等操作。
+
 若你想要提供更多API，可以到GitHub开issue讨论 :)
