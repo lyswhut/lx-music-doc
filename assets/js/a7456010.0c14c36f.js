@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklx_music_doc=self.webpackChunklx_music_doc||[]).push([[5980],{9365:function(s){s.exports=JSON.parse('{"name":"docusaurus-plugin-content-pages","id":"default"}')}}]);
