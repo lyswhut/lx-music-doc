@@ -45,7 +45,7 @@ title: Scheme URL 支持
 | 描述 | URL | 参数
 | --- | --- | ---
 | 搜索歌曲 | `music/search/{source}/{keywords}` | `source`（源，可选）<br />`keywords`（要搜索的内容，必须）<br />例：`music/search/kw/xxx`、`music/search/xxx`
-| 搜索并播放歌曲 | `music/searchPlay/{name-singer}` | `name-singer` （歌曲名，必须），可以只传入歌曲名，也可以传入`歌曲名-歌手名`
+| 搜索并播放歌曲 | `music/searchPlay/{name-singer}` | `name-singer` （歌曲名，必须），可以只传入歌曲名，也可以传入 **`歌曲名-歌手名`**
 | 打开歌单 | `songlist/open/{source}/{id/url}` | `source`（源，必须）<br />`id/url`（歌单ID或歌单URL，必须）<br />例：`songlist/open/kw/123456`
 | 播放歌曲 | `player/play` |
 | 暂停播放 | `player/pause` |

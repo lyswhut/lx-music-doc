@@ -5,7 +5,7 @@ title: Scheme URL 支持
 
 从v1.6.0起支持 Scheme URL，可以使用此功能从浏览器等场景下调用LX Music
 
-调用传参格式与PC端的一致，但目前仅支持以下 URL：
+调用传参格式与PC端的一致，入参格式说明看PC端 [Scheme URL 说明](/desktop/scheme-url)，但目前仅支持以下 URL：
 
 ### `data`方式传参
 
