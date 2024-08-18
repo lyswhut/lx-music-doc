@@ -88,6 +88,11 @@ const sidebars = {
         },
         {
           type: 'doc',
+          id: 'mobile/scheme-url', // document ID
+          label: 'Scheme URL支持', // sidebar label
+        },
+        {
+          type: 'doc',
           id: 'mobile/statusbar-lyric', // document ID
           label: '状态栏歌词', // sidebar label
         },
