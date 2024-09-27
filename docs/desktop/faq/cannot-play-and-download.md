@@ -62,7 +62,7 @@ title: 歌曲无法试听与下载
 
 卸载软件，安装时选“仅为我安装”，并将软件安装到到默认位置试试。
 
-更多信息看：<https://github.com/lyswhut/lx-music-desktop/issues/1928>
+更多信息看：[https://github.com/lyswhut/lx-music-desktop/issues/1928](https://github.com/lyswhut/lx-music-desktop/issues/1928)
 
 更换下载歌曲位置（目录）即可解决（一般是设置的歌曲下载目录没有读写权限导致的）。
 
