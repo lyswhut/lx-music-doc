@@ -77,12 +77,12 @@ const config = {
           { to: '/report', label: '问题反馈', position: 'left'},
           {
             href: 'https://github.com/lyswhut/lx-music-desktop',
-            label: '桌面版GitHub',
+            label: '桌面版 GitHub',
             position: 'right',
           },
           {
             href: 'https://github.com/lyswhut/lx-music-mobile',
-            label: '移动版GitHub',
+            label: '移动版 GitHub',
             position: 'right',
           },
         ],
