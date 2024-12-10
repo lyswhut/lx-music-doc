@@ -14,10 +14,10 @@ function HomepageHeader() {
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link className={clsx('button button--primary button--lg', styles.button)} to="/desktop">
-            电脑版文档
+            桌面版文档
           </Link>
           <Link className={clsx('button button--primary button--lg', styles.button)} to="/mobile">
-            手机版文档
+            移动版文档
           </Link>
           <Link className={clsx('button button--primary button--lg', styles.button)} to="/download">
             软件下载
