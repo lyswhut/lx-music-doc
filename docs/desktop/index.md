@@ -1,6 +1,6 @@
 # LX Music 桌面版说明
 
-一个基于 Electron + Vue 开发的音乐软件。
+一个基于 Electron & Vue 开发的音乐软件。
 
 所用技术栈：
 
@@ -9,8 +9,8 @@
 
 已支持的平台：
 
-- macOS
 - Linux
+- macOS
 - Windows 7 及以上
 
 软件变化请查看 [更新日志](https://github.com/lyswhut/lx-music-desktop/blob/master/CHANGELOG.md)。
