@@ -37,12 +37,12 @@ const sidebars = {
         {
           type: 'doc',
           id: 'desktop/scheme-url', // document ID
-          label: 'Scheme URL支持', // sidebar label
+          label: 'Scheme URL 支持', // sidebar label
         },
         {
           type: 'doc',
           id: 'desktop/open-api', // document ID
-          label: '开放API服务', // sidebar label
+          label: '开放 API 服务', // sidebar label
         },
         {
           type: 'doc',
@@ -89,7 +89,7 @@ const sidebars = {
         {
           type: 'doc',
           id: 'mobile/scheme-url', // document ID
-          label: 'Scheme URL支持', // sidebar label
+          label: 'Scheme URL 支持', // sidebar label
         },
         {
           type: 'doc',
