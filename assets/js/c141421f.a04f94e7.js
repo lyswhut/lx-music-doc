@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunklx_music_doc=self.webpackChunklx_music_doc||[]).push([[1004],{1324:function(e){e.exports=JSON.parse('{"name":"docusaurus-theme-search-algolia","id":"default"}')}}]);
