@@ -36,6 +36,10 @@ const config = {
     }
   },
 
+  future: {
+    experimental_faster: true,
+  },
+
   presets: [
     [
       'classic',
