@@ -16,7 +16,7 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        本项目支持在 <strong>Linux</strong>、<strong>macOS</strong>、<strong>Windows</strong> 及 <strong>Android</strong> 平台上运行，<i>没有计划支持 iOS</i>
+        本项目支持在 <strong>Linux</strong>、<strong>macOS</strong>、<strong>Windows</strong> 及 <strong>Android</strong> 平台上运行，<i>目前没有计划支持 iOS 和 HarmonyOS NEXT</i>
       </>
     ),
   },

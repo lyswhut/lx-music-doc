@@ -13,7 +13,7 @@ title: 问题反馈
 :::
 
 
-在阅读文档中的 **常见问题** 后仍然无法解决或找不到解决方法，可以到以下地址反馈！
+在阅读文档中的**常见问题**后仍然无法解决或找不到解决方法，可以到以下地址反馈！
 
 - 桌面版 GitHub 反馈地址：[https://github.com/lyswhut/lx-music-desktop/issues](https://github.com/lyswhut/lx-music-desktop/issues?q=is%3Aissue+)
 - 移动版 GitHub 反馈地址：[https://github.com/lyswhut/lx-music-mobile/issues](https://github.com/lyswhut/lx-music-mobile/issues?q=is%3Aissue+)

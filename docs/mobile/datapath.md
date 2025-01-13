@@ -6,7 +6,7 @@ title: 数据存储路径
 软件的数据存储在：`/data/user/0/cn.toside.music.mobile`
 
 :::tip
-此目录为 Android 应用私有目录，需要 ROOT 权限才能访问。
+此目录为 Android 应用私有目录，需要 root 权限才能访问。
 :::
 
 :::tip
