@@ -45,5 +45,5 @@ title: 支持的启动参数
 | `source` | 播放源，可用值为 `kw/kg/tx/wy/mg/myList`<br/> *`kw/kg/tx/wy/mg` 对应各源的在线列表，`myList` 为本地列表* |
 | `link` | 要播放的在线列表歌单链接或 ID<br/> `source` 为 `kw/kg/tx/wy/mg` 之一（即在线列表）时必传<br/> 举例：`./lx-music-desktop -play="type=songList&source=kw&link=<歌单 URL / ID>"`<br/> *注意：如果传入的是 URL，必须对 URL 进行编码后再传入* | 
 | `name` | 要播放的本地列表歌单名字<br/> `source` 为 `myList` 时必传<br/> 举例：`./lx-music-desktop -play="type=songList&source=myList&name=默认列表"` |
-| `index` | 从列表的哪个位置开始播放，可选，若不传则默认播放第一首歌曲<br/> 举例：`./lx-music-desktop -play="type=songList&source=myList&name=默认列表&index=2"` |d
+| `index` | 从列表的哪个位置开始播放，可选，若不传则默认播放第一首歌曲<br/> 举例：`./lx-music-desktop -play="type=songList&source=myList&name=默认列表&index=2"` |
 

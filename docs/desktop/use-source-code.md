@@ -26,7 +26,7 @@ npm run pack:dir
 # 构建安装包（Windows）
 npm run pack:win
 
-# 构建安装包（mac）
+# 构建安装包（macOS）
 npm run pack:mac
 
 # 构建安装包（Linux）

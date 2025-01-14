@@ -8,7 +8,7 @@ title: 歌曲无法试听与下载
 
 由于收到腾讯投诉要求停止提供软件内置的连接到他们平台的在线播放及下载服务，所以从即日（2023-10-18）起 LX Music 本身不再提供上述服务，在 v2.6.0 移除了所有内置自定义源，且之前版本内置的源也已失效。你需要编写或寻找别人分享的自定义源导入才可正常使用。
 
-提示：可以去 GitHub Issues 区找找。
+*提示：可以去 [GitHub Issues](https://github.com/lyswhut/lx-music-desktop/issues?q=is%3Aissue+) 找找。*
 
 ### 所有歌曲都提示 `请求异常😮，可以多试几次，若还是不行就换一首吧。。。`
 
@@ -43,7 +43,7 @@ title: 歌曲无法试听与下载
 
 ### 音频输出设备为空
 
-卸载软件，安装时选「**仅为我安装**」，并将软件安装到到默认位置试试。
+卸载并重新安装软件，安装时选「**仅为我安装**」，并保持默认安装路径试试。
 
 更多信息看：[https://github.com/lyswhut/lx-music-desktop/issues/1928](https://github.com/lyswhut/lx-music-desktop/issues/1928)
 

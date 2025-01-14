@@ -11,6 +11,6 @@ title: 杀毒软件提示有病毒或恶意行为
 
 当然，以上说明建立的前提是在你所用的安装包是从**本项目主页上写的链接**下载的。有相关能力者可以下载源代码自行构建安装包。
 
-从 `v0.17.0` 起，由于加入了「音频输出设备切换」功能，该功能调用了 [`MediaDevices.enumerateDevices()`](https://developer.mozilla.org/zh-CN/docs/Web/API/MediaDevices/enumerateDevices) 方法，可能导致安全软件提示 LX Music 访问摄像头（目前发现卡巴斯基、火绒会提示），但**实际上没有用到摄像头，并且摄像头的提示灯也不会亮**。你可以选择阻止访问。
+从 v0.17.0 起，由于加入了「音频输出设备切换」功能，该功能调用了 [`MediaDevices.enumerateDevices()`](https://developer.mozilla.org/zh-CN/docs/Web/API/MediaDevices/enumerateDevices) 方法，可能导致安全软件提示 LX Music 访问摄像头（目前发现卡巴斯基、火绒会提示），但**实际上没有用到摄像头，并且摄像头的提示灯也不会亮**。你可以选择阻止访问。
 
 最后，若出现杀毒软件报毒、存在恶意行为，**请自行判断选择是否继续使用本软件！**
