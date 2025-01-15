@@ -9,5 +9,5 @@ title: 使用软件时导致耳机意外关机
 
 详情看：[https://github.com/lyswhut/lx-music-desktop/issues/457](https://github.com/lyswhut/lx-music-desktop/issues/457)
 
-若出现该问题可尝试添加 `-dhmkh` 启动参数解决，启动参数添加方法请自行百度「windows给快捷方式添加启动参数」。
+若出现该问题可尝试添加 `-dhmkh` 启动参数解决，启动参数添加方法请自行百度 `给快捷方式添加参数`。
 
