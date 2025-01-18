@@ -8,14 +8,12 @@ title: 软件下载
 ### 桌面版
 
 - 正式版：[https://github.com/lyswhut/lx-music-desktop/releases](https://github.com/lyswhut/lx-music-desktop/releases)
-- 测试版（GitHub Actions）：[https://github.com/lyswhut/lx-music-desktop/actions/workflows/beta-pack.yml](https://github.com/lyswhut/lx-music-desktop/actions/workflows/beta-pack.yml)
-- 测试版（nightly.link）：[https://nightly.link/lyswhut/lx-music-desktop/workflows/beta-pack/beta](https://nightly.link/lyswhut/lx-music-desktop/workflows/beta-pack/beta)
+- 测试版：[https://github.com/lyswhut/lx-music-desktop/actions/workflows/beta-pack.yml](https://github.com/lyswhut/lx-music-desktop/actions/workflows/beta-pack.yml)
 
 ### 移动版
 
 - 正式版：[https://github.com/lyswhut/lx-music-mobile/releases](https://github.com/lyswhut/lx-music-mobile/releases)
-- 测试版（GitHub Actions）：[https://github.com/lyswhut/lx-music-mobile/actions/workflows/beta-pack.yml](https://github.com/lyswhut/lx-music-mobile/actions/workflows/beta-pack.yml)
-- 测试版（nightly.link）：[https://nightly.link/lyswhut/lx-music-mobile/workflows/beta-pack/beta](https://nightly.link/lyswhut/lx-music-mobile/workflows/beta-pack/beta)
+- 测试版：[https://github.com/lyswhut/lx-music-mobile/actions/workflows/beta-pack.yml](https://github.com/lyswhut/lx-music-mobile/actions/workflows/beta-pack.yml)
 
 :::caution
 测试版包含一些正式版未包含的特性，仅用于体验新功能和测试。测试版可能包含一些未知 bug，使用起来可能不稳定。
@@ -24,7 +22,12 @@ title: 软件下载
 :::
 
 :::tip
-<b>测试版通过 GitHub Actions 进行分发，需要登录 GitHub 账号才能下载。</b>如果你没有或不方便注册/登录 GitHub，也可以通过 nightly.link 下载。
+**测试版通过 GitHub Actions 进行分发，需要登录 GitHub 账号才能下载。**
+
+如果你没有或不方便注册/登录 GitHub，也可以通过 nightly.link 下载：
+
+- 桌面测试版：[https://nightly.link/lyswhut/lx-music-desktop/workflows/beta-pack/beta](https://nightly.link/lyswhut/lx-music-desktop/workflows/beta-pack/beta)
+- 移动测试版：[https://nightly.link/lyswhut/lx-music-mobile/workflows/beta-pack/beta](https://nightly.link/lyswhut/lx-music-mobile/workflows/beta-pack/beta)
 
 **nightly.link 仅指向最新的测试版本。**
 
