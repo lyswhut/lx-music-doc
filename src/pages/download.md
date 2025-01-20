@@ -30,8 +30,6 @@ title: 软件下载
 - 移动测试版：[https://nightly.link/lyswhut/lx-music-mobile/workflows/beta-pack/beta](https://nightly.link/lyswhut/lx-music-mobile/workflows/beta-pack/beta)
 
 **nightly.link 仅指向最新的测试版本。**
-
-如果测试版版本号比正式版低，**请优先使用版本号更高的版本**。
 :::
 
 <!-- ## 网盘下载（推荐国内用户在网盘下载）
@@ -84,6 +82,7 @@ title: 软件下载
 - 建议优先下载 `arm64-v8a` 安装包，若无法安装再下载 `universal` 安装包。
 - 另外还有 `armeabi-v7a`/`x86_64` 等安装包，若有需要可自行下载。
 - 版本号包含 `sl` 的安装包为「墨·状态栏」特别版，详情看[状态栏歌词](./mobile/statusbar-lyric)。
+- `universal` 安装包的内部版本号总是低于单架构安装包的内部版本（包括跨版本）。安装新版本时，如果遇到版本号太低的提示，请尝试使用其他单架构安装包。
 
 ***目前没有计划支持 iOS 和 HarmonyOS NEXT。***
 
