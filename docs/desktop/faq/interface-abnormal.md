@@ -10,7 +10,7 @@ title: 界面异常（界面显示不完整、界面无法显示）
 
 > 最近发现是electron的通病，可以尝试在Nvidia控制面板中关闭「平滑处理-FXAA」
 
-若以上方式无法解决你的问题，可以尝试添加运行参数 `--no-sandbox` 启动，例如：`.\lx-music-desktop.exe --no-sandbox`，添加方法可自行百度 `给快捷方式加参数`。
+若以上方式无法解决你的问题，可以尝试添加运行参数 `--no-sandbox` 启动，例如：`.\lx-music-desktop.exe --no-sandbox`，添加方法可自行百度 `给快捷方式添加参数`。
 
 尝试将 `--no-sandbox` 逐个换成以下参数启动，直到恢复正常为止：
 
@@ -32,9 +32,9 @@ title: 界面异常（界面显示不完整、界面无法显示）
 > Transparent windows will not work when DWM is disabled.  
 > *禁用 DWM 时，透明窗口将不起作用。*
 
-因此，当 Windows 7 没有使用 **Aero 主题**时，界面将会显示异常，开启 Aero 的方法请自行百度：`win7开启Aero效果`（开启后可看到任务栏有透明效果）。
+因此，当 Windows 7 没有使用 **Aero 主题**时，界面将会显示异常，开启 Aero 的方法请自行百度 `Win7 开启 Aero 效果`（开启后可看到任务栏有透明效果）。
 
-从 `0.14.0` 版本起不再强制要求开启透明效果，若你实在不想开启（若非电脑配置太低，墙裂建议开启！），可通过添加运行参数 `-dt` 运行程序即可，例如：`.\lx-music-desktop.exe -dt`，添加方法可自行百度 `给快捷方式加参数`，该参数的作用是用来控制程序是否使用非透明窗口运行。
+从 `0.14.0` 版本起不再强制要求开启透明效果，若你实在不想开启（若非电脑配置太低，墙裂建议开启！），可通过添加运行参数 `-dt` 运行程序即可，例如：`.\lx-music-desktop.exe -dt`，添加方法可自行百度 `给快捷方式添加参数`，该参数的作用是用来控制程序是否使用非透明窗口运行。
 
 :::tip
 启用 **Aero 主题**后，若软件出现黑边框，则重启软件即可恢复正常。
@@ -48,11 +48,11 @@ title: 界面异常（界面显示不完整、界面无法显示）
 
 原始 Issue 看：[https://github.com/electron/electron/issues/19569#issuecomment-522231083](https://github.com/electron/electron/issues/19569#issuecomment-522231083)
 
-解决办法：下载 `.NET Framework 4.7.1` **或更高版本**安装即可（建议安装最新版，若安装过程中遇到问题可尝试自行百度解决）。
+解决办法：下载 **.NET Framework 4.7.1 或更高版本**安装即可（建议安装最新版，若安装过程中遇到问题可尝试自行百度解决）。
 
 Microsoft 官方下载地址：[https://dotnet.microsoft.com/download/dotnet-framework](https://dotnet.microsoft.com/download/dotnet-framework)
 
-下载 `Runtime(运行时)` 版即可，安装完成后可能需要重启才生效。**若出现闪烁的情况**，可阅读下面的「**Windows 7 整个界面闪烁**」解决。
+下载「**Runtime (运行时)**」版即可，安装完成后可能需要重启才生效。**若出现闪烁的情况**，可阅读下面的「**Windows 7 整个界面闪烁**」解决。
 
 ### Windows 7 整个界面闪烁（消失又出现）
 

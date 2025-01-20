@@ -21,6 +21,17 @@ title: 软件下载
 <b>普通用户建议优先使用正式版。</b>专业用户以及愿意协助测试的用户可以尝试使用测试版。
 :::
 
+:::tip
+**测试版通过 GitHub Actions 进行分发，需要登录 GitHub 账号才能下载。**
+
+如果你没有或不方便注册/登录 GitHub，也可以通过 nightly.link 下载：
+
+- 桌面测试版：[https://nightly.link/lyswhut/lx-music-desktop/workflows/beta-pack/beta](https://nightly.link/lyswhut/lx-music-desktop/workflows/beta-pack/beta)
+- 移动测试版：[https://nightly.link/lyswhut/lx-music-mobile/workflows/beta-pack/beta](https://nightly.link/lyswhut/lx-music-mobile/workflows/beta-pack/beta)
+
+**nightly.link 仅指向最新的测试版本。**
+:::
+
 <!-- ## 网盘下载（推荐国内用户在网盘下载）
 
 推荐国内用户使用此方式下载，软件发布更新时，此网盘的安装包会同步更新到最新版本。
@@ -71,5 +82,15 @@ title: 软件下载
 - 建议优先下载 `arm64-v8a` 安装包，若无法安装再下载 `universal` 安装包。
 - 另外还有 `armeabi-v7a`/`x86_64` 等安装包，若有需要可自行下载。
 - 版本号包含 `sl` 的安装包为「墨·状态栏」特别版，详情看[状态栏歌词](./mobile/statusbar-lyric)。
+- `universal` 安装包的内部版本号总是低于单架构安装包的内部版本（包括跨版本）。安装新版本时，如果遇到版本号太低的提示，请尝试使用其他单架构安装包。
 
 ***目前没有计划支持 iOS 和 HarmonyOS NEXT。***
+
+## 关于杀软报毒的说明
+
+如果有杀毒软件报毒或提示有可疑行为，**请先确认软件是从本页面提供的渠道下载的**。
+
+如果确认是从本页面提供的渠道下载的，那么大概率为误报。**我们不对第三方渠道下载的安全性作任何保证。**
+
+详情请参阅「**常见问题**」中的「**杀毒软件提示有病毒或恶意行为**」部分。
+:::
