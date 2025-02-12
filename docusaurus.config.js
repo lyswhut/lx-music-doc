@@ -65,6 +65,11 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: false,
+        respectPrefersColorScheme: true,
+      },
       metadata: [{name: 'keywords', content: 'LX Music, 洛雪音乐助手, lx-music, lx-music-desktop, lx-music-mobile'}],
       navbar: {
         title: 'LX Music',
