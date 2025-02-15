@@ -40,6 +40,26 @@ const config = {
     experimental_faster: true,
   },
 
+  themes: [
+    // ... Your other themes.
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+      ({
+        // ... Your options.
+        // `hashed` is recommended as long-term-cache of index file is possible.
+        hashed: true,
+        indexPages: true,
+
+        // For Docs using Chinese, it is recomended to set:
+        language: ["en", "zh"],
+
+        // If you're using `noIndex: true`, set `forceIgnoreNoIndex` to enable local index:
+        // forceIgnoreNoIndex: true,
+      }),
+    ],
+  ],
+
   presets: [
     [
       'classic',
@@ -144,29 +164,6 @@ const config = {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
-      },
-      algolia: {
-        // The application ID provided by Algolia
-        appId: 'NWP2U7O7XE',
-  
-        // Public API key: it is safe to commit it
-        apiKey: 'd74d2766346af31fdc6c6f918b011c17',
-  
-        indexName: 'lyswhut',
-  
-        // Optional: see doc section below
-        contextualSearch: true,
-  
-        // // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-        // externalUrlRegex: 'external\\.com|domain\\.com',
-  
-        // // Optional: Algolia search parameters
-        // searchParameters: {},
-  
-        // // Optional: path for search page that enabled by default (`false` to disable it)
-        // searchPagePath: 'search',
-  
-        //... other Algolia params
       },
     }),
 };
