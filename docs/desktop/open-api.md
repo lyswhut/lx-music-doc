@@ -37,6 +37,8 @@ title: 开放 API 服务
 | `lyricLineAllText` | 当前播放歌词及扩展歌词文本<br/> *扩展歌词包含翻译、罗马音等，使用换行符分割* |
 | `lyric` | 当前歌曲 LRC 歌词文本 |
 | `collect` | 当前歌曲是否已收藏 |
+| `volume` | 音量 |
+| `mute` | 是否静音 |
 
 响应数据例子：
 
@@ -120,6 +122,8 @@ curl -N http://127.0.0.1:23330/subscribe-player-status
 | `lyricLineAllText` | 当前播放歌词及扩展歌词文本<br/> *扩展歌词包含翻译、罗马音等，使用换行符分割* |
 | `lyric` | 当前歌曲 LRC 歌词文本 |
 | `collect` | 当前歌曲是否已收藏 |
+| `volume` | 音量 |
+| `mute` | 是否静音 |
 
 响应数据例子：
 
@@ -145,6 +149,9 @@ data: "幸存者 Drifter"
 | `/pause` | 暂停 |
 | `/skip-next` | 下一曲 |
 | `/skip-prev` | 上一曲 |
+| `/seek` | 调整播放进度，参数 `offset` |
+| `/volume` | 调整音量，参数 `volume`，值： `1-100` |
+| `/mute` | 调整静音，参数 `mute`，值： `true / false` |
 | `/collect` | 收藏当前歌曲 |
 | `/uncollect` | 取消收藏当前歌曲 |
 
