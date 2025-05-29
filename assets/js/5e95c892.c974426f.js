@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunklx_music_doc=globalThis.webpackChunklx_music_doc||[]).push([["3432"],{1359:function(s,c,e){e.r(c),e.d(c,{default:()=>o});var r=e(5893);e(7294);var u=e(7026),a=e(9741),l=e(4681),i=e(8790),n=e(5081);function o(s){return(0,r.jsx)(a.FG,{className:(0,u.Z)(l.k.wrapper.docsPages),children:(0,r.jsx)(n.Z,{children:(0,i.H)(s.route.routes)})})}}}]);
