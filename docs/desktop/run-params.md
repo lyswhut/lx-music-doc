@@ -19,6 +19,12 @@ title: 支持的启动参数
 
 注：该参数对桌面歌词无效；原 `-nt` 参数已重命名为 `-dt`。*v1.6.0 起重命名*
 
+### `-hidden`
+
+在启动时将软件最小化到系统托盘。*适用于 v2.12.0 及后续版本*
+
+注：若未启用系统托盘，该设置参数还会启用系统托盘设置
+
 ### `-dhmkh`
 
 禁用硬件媒体密钥处理 *(Disable Hardware Media Key Handling)*，此选项将禁用 Chromium 的 *Hardware Media Key Handling* 特性。*适用于 v1.9.0 及后续版本*
