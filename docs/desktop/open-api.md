@@ -36,6 +36,9 @@ title: 开放 API 服务
 | `lyricLineText` | 当前播放歌词文本 |
 | `lyricLineAllText` | 当前播放歌词及扩展歌词文本<br/> *扩展歌词包含翻译、罗马音等，使用换行符分割* |
 | `lyric` | 当前歌曲 LRC 歌词文本 |
+| `tlyric` | 当前歌曲翻译 LRC 歌词文本（如果有） |
+| `rlyric` | 当前歌曲罗马音 LRC 歌词文本（如果有） |
+| `lxlyric` | 当前歌曲 Any Listen 歌词文本（如果有） |
 | `collect` | 当前歌曲是否已收藏 |
 | `volume` | 音量 |
 | `mute` | 是否静音 |
@@ -84,6 +87,25 @@ title: 开放 API 服务
 [00:47.345]依昔留着昨天的芬芳
 ```
 
+### 获取当前歌曲所有类型歌词
+
+接口地址：`/lyric-all`
+
+请求方法：`GET`
+
+响应数据格式：UTF-8 编码的 JSON 数据
+
+响应数据例子：
+
+```json
+{
+  "lyric": "...",
+  "tlyric": "...",
+  "rlyric": "...",
+  "lxlyric": "...",
+}
+```
+
 ### 播放器状态订阅
 
 SSE 事件流接口。本接口接受一个普通的 HTTP GET 请求，只是请求会保持长链接状态。播放器的状态在变更时通过文本事件流的形式将其实时返回。你可以使用以下命令测试该接口：
@@ -121,6 +143,9 @@ curl -N http://127.0.0.1:23330/subscribe-player-status
 | `lyricLineText` | 当前播放歌词文本 |
 | `lyricLineAllText` | 当前播放歌词及扩展歌词文本<br/> *扩展歌词包含翻译、罗马音等，使用换行符分割* |
 | `lyric` | 当前歌曲 LRC 歌词文本 |
+| `tlyric` | 当前歌曲翻译 LRC 歌词文本（如果有） |
+| `rlyric` | 当前歌曲罗马音 LRC 歌词文本（如果有） |
+| `lxlyric` | 当前歌曲 Any Listen 歌词文本（如果有） |
 | `collect` | 当前歌曲是否已收藏 |
 | `volume` | 音量 |
 | `mute` | 是否静音 |
