@@ -165,7 +165,7 @@ const config: Config = {
       //     ],
       //   },
       // ],
-      copyright: `Copyright © ${new Date().getFullYear()} LX Music, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} lyswhut & Contributors. Website content licensed under <a href="https://github.com/lyswhut/lx-music-doc/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">MIT</a>. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
