@@ -181,5 +181,12 @@ data: "幸存者 Drifter"
 | `/uncollect` | 取消收藏当前歌曲 |
 
 你还可以配合 [Scheme URL](./scheme-url.md) 控制播放器的其他操作，例如搜索并播放某歌曲的操作。
+### 第三方集成
+
+以下第三方项目基于开放 API 构建：
+
+| 项目 | 描述 |
+| --- | --- |
+| [HaloLyricSync](https://github.com/nxz1026/HaloLyricSync) | 通过开放 API 实时读取歌词，同步显示到 HALO PIXELBAR 音箱 |
 
 若你想要提供更多 API，可以到 GitHub [提交 Issue](https://github.com/lyswhut/lx-music-desktop/issues?q=is%3Aissue+) 进行讨论。:)
